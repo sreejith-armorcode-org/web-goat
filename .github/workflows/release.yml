@@ -1,6 +1,4 @@
 name: "Release Pipeline"
-env:
- IMAGE_NAME: sreejitharmorcode/web-goat
 on:
   push:
     tags:
@@ -93,8 +91,8 @@ jobs:
           push: true
           platforms: linux/amd64, linux/arm64
           tags: |
-            webgoat/webgoat:${{ env.WEBGOAT_TAG_VERSION }}
-            webgoat/webgoat:latest
+            sreejitharmorcode/web-goat:${{ env.WEBGOAT_TAG_VERSION }}
+            sreejitharmorcode/web-goat:latest
           build-args: |
             webgoat_version=${{ env.WEBGOAT_MAVEN_VERSION }}
 
