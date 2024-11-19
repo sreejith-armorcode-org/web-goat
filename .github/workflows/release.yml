@@ -96,18 +96,18 @@ jobs:
           build-args: |
             webgoat_version=${{ env.WEBGOAT_MAVEN_VERSION }}
 
-      - name: "Build and push WebGoat desktop"
-        uses: docker/build-push-action@v6.9.0
-        with:
-          context: ./
-          file: ./Dockerfile_desktop
-          push: true
-          platforms: linux/amd64, linux/arm64
-          tags: |
-            webgoat/webgoat-desktop:${{ env.WEBGOAT_TAG_VERSION }}
-            webgoat/webgoat-desktop:latest
-          build-args: |
-            webgoat_version=${{ env.WEBGOAT_MAVEN_VERSION }}
+      #- name: "Build and push WebGoat desktop"
+      #  uses: docker/build-push-action@v6.9.0
+      #  with:
+      #    context: ./
+      #    file: ./Dockerfile_desktop
+      #    push: true
+      #    platforms: linux/amd64, linux/arm64
+      #    tags: |
+      #      sreejitharmorcode/web-goat-desktop:${{ env.WEBGOAT_TAG_VERSION }}
+      #      sreejitharmorcode/web-goat-desktop:latest
+      #    build-args: |
+      #      webgoat_version=${{ env.WEBGOAT_MAVEN_VERSION }}
   new_version:
     if: github.repository == 'web-goat'
     name: Update to next SNAPSHOT version
