@@ -1,4 +1,6 @@
 name: "Release Pipeline"
+env:
+ IMAGE_NAME: sreejitharmorcode/web-goat
 on:
   push:
     tags:
