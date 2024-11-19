@@ -109,7 +109,7 @@ jobs:
       #    build-args: |
       #      webgoat_version=${{ env.WEBGOAT_MAVEN_VERSION }}
   new_version:
-    if: github.repository == 'web-goat'
+    if: github.repository == 'sreejith-armorcode-org/web-goat'
     name: Update to next SNAPSHOT version
     needs: [ release ]
     runs-on: ubuntu-latest
