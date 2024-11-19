@@ -5,7 +5,7 @@ on:
       - v*
 jobs:
   release:
-    if: github.repository == 'web-goat'
+    if: github.repository == 'sreejith-armorcode-org/web-goat'
     name: Release WebGoat
     runs-on: ubuntu-latest
     permissions:
