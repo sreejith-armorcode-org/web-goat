@@ -18,7 +18,7 @@ spec:
         - name: swarm-visualizer
           image: sreejitharmorcode/webgoat:latest
           ports:
-            - containerPort: 8081 # Port exposed by the visualizer
+            - containerPort: 9090 # Port exposed by the visualizer
           env:
             - name: VISUALIZER_TASK
               value: "true" # Enable task visualization if needed
