@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: webgoat
-          image: sreejitharmorcode/webgoat:latest
+          image: sreejitharmorcode/web-goat:latest
           ports:
             - containerPort: 9090 # Port exposed by the visualizer
