@@ -1,24 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: swarm-visualizer
+  name: webgoat
   labels:
-    app: swarm-visualizer
+    app: webgoat
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: swarm-visualizer
+      app: webgoat
   template:
     metadata:
       labels:
-        app: swarm-visualizer
+        app: webgoat
     spec:
       containers:
-        - name: swarm-visualizer
+        - name: webgoat
           image: sreejitharmorcode/webgoat:latest
           ports:
             - containerPort: 9090 # Port exposed by the visualizer
-          env:
-            - name: VISUALIZER_TASK
-              value: "true" # Enable task visualization if needed
